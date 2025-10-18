@@ -184,15 +184,19 @@ Opción 1 — Clonarlo o descargarlo localmente
 
 -> Escribir “git clone https://github.com/usuario/Modelo_ML.git”
 
-->	Instalar Python 3.10+ (Si tiene problemas con la versión 3.13 se recomienda ejecutar “winget install Python.Python.3.12” desde VSC)
+-> Ir a Visual Studio Code (VSC) e Instalar Python 3.10+ (Si tiene problemas con la versión 3.13 se recomienda ejecutar “winget install Python.Python.3.12” desde VSC)
 
 ->	Instalar dependencias con “pip3 install -r requirements.txt”
 
-->	Instalar seaborn con “pip3 install seaborn” y scikit-learn con “pip install scikit-learn”
+->	Instalar seaborn con “pip3 install seaborn” y scikit-learn con “pip3 install scikit-learn”
 
-->	Instalar entorno virtual desde VSC con “pip install virtualenv” o “pip3 install virtualenv”
+->	Instalar entorno virtual desde VSC con “pip3 install virtualenv”
 
-->	Abrir entorno con el comando “.\.venv\Scripts\Activate.ps1”
+-> Ejecutar “Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass”
+
+-> Crear entorno virtual con “py -3.12 -m venv .venv”
+
+-> Abrir entorno con el comando “.\.venv\Scripts\Activate.ps1”
 
 ->	Para abrir el servidor que ejecuta la aplicación y pone en marcha la API, se debe ejecutar el siguiente comando desde VSC: “uvicorn 04_FASTAPI:app --host 0.0.0.0 --port 8080 --reload”
 
