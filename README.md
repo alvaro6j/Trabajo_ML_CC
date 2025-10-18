@@ -165,6 +165,41 @@ Producto de este resultado se selecciona el modelo HistGradientBoosting
  
 ![alt text](image-1.png)
 
+Nota: Podemos observar el código para exportar el modelo serializado en el archivo '02_Crear_pkl.py'. Del mismo modo, el código para la lectura del modelo desde los archivos pkl se encuentra en '03_Leer_pkl.py'
+
+# 3.	Creación de la API con FastAPI
+
+Para implementar la API se desarrolló el código que se encuentra en el archivo ‘04_FASTAPI.py’
+
+Instrucciones para la ejecución:
+
+Opción 1 — Clonarlo o descargarlo localmente
+
+📦En este repositorio de Github ir a “Code” y copiar la url
+
+![alt text](image-3.png)
+
+->	Ir a carpeta de destino del PC donde se creará el entorno y abrir una Terminal
+![alt text](image-4.png)
+
+-> Escribir “git clone https://github.com/usuario/Modelo_ML.git”
+
+->	Instalar Python 3.10+ (Si tiene problemas con la versión 3.13 se recomienda ejecutar “winget install Python.Python.3.12” desde VSC)
+
+->	Instalar dependencias con “pip3 install -r requirements.txt”
+
+->	Instalar seaborn con “pip3 install seaborn” y scikit-learn con “pip install scikit-learn”
+
+->	Instalar entorno virtual desde VSC con “pip install virtualenv” o “pip3 install virtualenv”
+
+->	Abrir entorno con el comando “.\.venv\Scripts\Activate.ps1”
+
+->	Para abrir el servidor que ejecuta la aplicación y pone en marcha la API, se debe ejecutar el siguiente comando desde VSC: “uvicorn 04_FASTAPI:app --host 0.0.0.0 --port 8080 --reload”
+
+Debe aparecer el siguiente mensaje: 
+![alt text](image-5.png)
+
+
 
 # Requirements
 
@@ -190,18 +225,6 @@ pip3 install -r requirements.txt
 
 ```
 
-# Metodología
-
-De acuerdo al análisis descriptivo realizado en el archivo “01_Análisis_descriptivo”, la decisión tomada es que se aplicarán los siguientes modelos 
-
-Modelos utilizados:
-
--	Regresión logística con balanceo de clases usando solo las variables con mayor poder discriminativo (‘Edad’, ‘Años_Trabajando’, ‘Deuda_Comercial’ y ‘Ratio_Ingresos_Deudas’).
--	RandomForest con todas las variables
--	HistGradientBoosting con todas las variables
-
-
-De acuerdo al análisis descriptivo realizado en el archivo “01_Análisis_descriptivo”, la decisión tomada es que se aplicarán los siguientes modelos
 
 ## Changelog v0.1
 
