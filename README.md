@@ -135,7 +135,36 @@ Nivel 5: Posg → Estudios de posgrado.
 
 	Otras Variables numéricas:
 
-Cómo se vio anteriormente en la matriz de correlación, las variables numéricas 'Ingresos', 'Deuda_Credito' y 'Otras_Deudas', tienen un bajo poder discriminativo para poder predecir si un cliente cumple o no, por lo que se dejarán fuera en el modelo de entrenamiento.
+Cómo se vio anteriormente en la matriz de correlación, las variables numéricas 'Ingresos', 'Deuda_Credito' y 'Otras_Deudas', tienen un bajo poder discriminativo para poder predecir si un cliente cumple o no, por lo que se dejarán fuera en el modelo de entrenamiento, en el caso de utilizar un modelo de regresión logistica.
+
+2.	Entrenamiento del modelo
+
+De acuerdo con el análisis descriptivo realizado en el archivo “01_Análisis_descriptivo”, la decisión tomada es que se aplicarán los siguientes modelos de clasificación:
+
+-	Regresión logística con balanceo de clases usando solo las variables con mayor poder discriminativo (‘Edad’, ‘Años_Trabajando’, ‘Deuda_Comercial’ y ‘Ratio_Ingresos_Deudas’).
+-	RandomForest con todas las variables: 
+-	HistGradientBoosting con todas las variables
+
+Para los últimos 2 modelos se usarán todas las variables, ya que se usará una metodología que se entrena usando un pipeline completo que ya incluye imputación (SimpleImputer), escalado (RobustScaler) y codificación categórica (OneHotEncoder)
+
+Producto de que se trata de un estudio de caso de clasificación binaria, la tasa de buena clasificación que se ocupará para evaluar los tres modelos será el Accuracy.
+
+Luego, se elegirá el modelo con mayor Accuracy para hacer el despliegue en FastApi.
+
+Los resultados obtenidos para estos 3 métodos fueron los siguientes:
+
+•	Accuracy:
+
+-	Logistic Regression:   0.7305
+-	Random Forest:         0.9948
+-	HistGradientBoosting:  0.9970
+
+Producto de este resultado se selecciona el modelo HistGradientBoosting
+
+![alt text](image.png)
+ 
+![alt text](image-1.png)
+
 
 # Requirements
 
