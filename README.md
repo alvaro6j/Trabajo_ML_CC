@@ -29,12 +29,12 @@ En el archivo “Tabla_Trabajo_Grupal”, se encuentran la tabla “Desarrollo�
 
 Metodología de Desarrollo de Modelos:
 
-1. Preparación y análisis de datos
+# 1. Preparación y análisis de datos
 
 Para realizar el análisis de las variables predictoras en el conjunto de entrenamiento, en primer lugar, se llevó a cabo un análisis exploratorio acompañado de un proceso de limpieza de datos.
 Se identificaron 10.856 registros duplicados de un total de 12.356, por lo que se conservaron únicamente 1.500 registros.
 
-	1.1 Dividir tablas de entrenamiento y test:
+#	1.1 Dividir tablas de entrenamiento y test:
 
 Para seleccionar el conjunto de entrenamiento, se generó una selección aleatoria mediante código en Python para la tabla desarrollo, el cual se puede verificar en el archivo anexo “01_Análisis_descriptivo.py”.
 
@@ -43,7 +43,7 @@ La cantidad de registros obtenidos fue la siguiente:
 o	Conjunto de entrenamiento: 1.050 registros (70%)
 o	Conjunto test: 450 registros (30%)
 
-	1.2 Análisis descriptivo para conjunto de entrenamiento:
+#	1.2 Análisis descriptivo para conjunto de entrenamiento:
 
 De acuerdo con los principales hallazgos obtenidos fueron los siguientes:
 
@@ -54,7 +54,7 @@ Por otro lado, las variables “Ingresos”, “Otras_Deudas” y “Deuda_Créd
 Análogamente, para la cantidad de registros donde no hubo incumplimiento de clientes (‘Default’ = 0), se obtienen 380 registros y la distribución es similar analizado anteriormente. 
 
 
-	1.3 Descripción y comparación de variables independientes:
+#	1.3 Descripción y comparación de variables independientes:
 
 Para realizar un análisis descriptivo e identificar inicialmente las variables con mayor capacidad discriminativa, resulta útil examinar la matriz de correlación:
 
@@ -70,7 +70,7 @@ Esto refleja un mayor poder discriminatorio de estas cuatro variables, para dete
 
 Variables con mayor capacidad discriminativa:
 
-	- Edad: 
+#	- Edad: 
 
 Default = 1 (Incumplimiento)
 <img width="797" height="59" alt="image" src="https://github.com/user-attachments/assets/09823626-4779-43cd-9974-611ed1afa414" />
@@ -80,7 +80,7 @@ Default = 0 (Cumplimiento)
 
 <img width="1121" height="413" alt="image" src="https://github.com/user-attachments/assets/4d739304-bb79-4dbe-b447-c627f131d15a" />
 
-	- Años_Trabajando: 
+#	- Años_Trabajando: 
 
 Default = 1 (Incumplimiento)
 <img width="795" height="50" alt="image" src="https://github.com/user-attachments/assets/ef2eff5b-4206-4136-a21d-11e5f2a37e9e" />
@@ -90,7 +90,7 @@ Default = 0 (Cumplimiento)
 
 <img width="1161" height="439" alt="image" src="https://github.com/user-attachments/assets/49546058-737d-4c65-b1c3-6b6db7baa404" />
 
-	- Deuda Comercial: 
+#	- Deuda Comercial: 
 
 Default = 1 (Incumplimiento)
 <img width="836" height="51" alt="image" src="https://github.com/user-attachments/assets/39eafbe5-89cb-47d5-953f-df7f5fbde13f" />
@@ -100,7 +100,7 @@ Default = 0 (Cumplimiento)
 
 <img width="1172" height="436" alt="image" src="https://github.com/user-attachments/assets/e5e527ff-e3fe-46ec-8865-a296e766d63e" />
 
-	- Ratio_Ingresos_Deudas
+#	- Ratio_Ingresos_Deudas
 
 Default = 1 (Incumplimiento)
 <img width="806" height="53" alt="image" src="https://github.com/user-attachments/assets/cc30f1a0-8c24-42b5-a2d5-ca88fef8acc9" />
@@ -112,7 +112,7 @@ Default = 0 (Cumplimiento)
 
 Variables con poca capacidad discriminativa:
 
-	- Nivel_Educacional
+#	- Nivel_Educacional
 
 Para esta variable categórica podemos identificar los siguientes valores a probabilidad de incumplimiento según el conjunto de entrenamiento:
 
@@ -133,11 +133,11 @@ Nivel 3: SupInc → Estudios superiores incompletos.
 Nivel 4: SupCom → Estudios superiores completos.
 Nivel 5: Posg → Estudios de posgrado.
 
-	Otras Variables numéricas:
+#	Otras Variables numéricas:
 
 Cómo se vio anteriormente en la matriz de correlación, las variables numéricas 'Ingresos', 'Deuda_Credito' y 'Otras_Deudas', tienen un bajo poder discriminativo para poder predecir si un cliente cumple o no, por lo que se dejarán fuera en el modelo de entrenamiento, en el caso de utilizar un modelo de regresión logistica.
 
-2.	Entrenamiento del modelo
+# 2.	Entrenamiento del modelo
 
 De acuerdo con el análisis descriptivo realizado en el archivo “01_Análisis_descriptivo”, la decisión tomada es que se aplicarán los siguientes modelos de clasificación:
 
