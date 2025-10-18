@@ -199,6 +199,38 @@ Opción 1 — Clonarlo o descargarlo localmente
 Debe aparecer el siguiente mensaje: 
 ![alt text](image-5.png)
 
+🌐 Uso de la API:
+->	Desde el navegador ir a Ir a http://127.0.0.1:8000/docs
+->	Ir al botón "Try it out"
+->	Completar los campos de entrada como en el siguiente ejemplo:
+{
+  "Edad": 50,
+  "Nivel_Educacional": "SupCom",
+  "Años_Trabajando": 10,
+  "Ingresos": 150,
+  "Deuda_Comercial": 0.5,
+  "Deuda_Credito": 10,
+  "Otras_Deudas": 50,
+  "Ratio_Ingresos_Deudas": 0.25
+}
+->	Presiona "Execute"
+
+🧩 Valores válidos para Nivel_Educacional
+
+El campo Nivel_Educacional solo acepta uno de los siguientes valores:
+
+Nivel	Significado
+Bas	Educación básica
+Med	Educación media
+SupCom	Educación superior completa
+SupInc	Educación superior incompleta
+Posg	Postgrado o estudios superiores
+
+Si introduce otro valor, la API devolverá un error de validación.
+
+⏹️ Detener la aplicación
+
+->	Desde la terminal de VSC presionar Ctrl + C para detener el servicio de Uvicorn
 
 
 # Requirements
