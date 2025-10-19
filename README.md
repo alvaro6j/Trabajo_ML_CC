@@ -186,7 +186,7 @@ Opción 1 — Clonarlo o descargarlo localmente
 
 -> Ir a Visual Studio Code (VSC) e Instalar Python 3.10+ (Si tiene problemas con la versión 3.13 se recomienda ejecutar “winget install Python.Python.3.12” desde VSC)
 
-    - winget install Python.Python.3.12
+    winget install Python.Python.3.12
 
 ->	Instalar dependencias
 
