@@ -190,33 +190,33 @@ Opción 1 — Clonarlo o descargarlo localmente
 
 ->	Instalar dependencias
 
-    - pip3 install -r requirements.txt
+    pip3 install -r requirements.txt
 
 ->	Instalar seaborn y scikit-learn
 
-    - pip3 install seaborn
+    pip3 install seaborn
 
-    - pip3 install scikit-learn
+    pip3 install scikit-learn
 
 ->	Instalar entorno virtual desde VSC
 
-    - pip3 install virtualenv
+    pip3 install virtualenv
 
 -> Ejecutar políticas de ejecución
 
-    - Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 -> Crear entorno virtual
 
-    - py -3.12 -m venv .venv
+    py -3.12 -m venv .venv
 
 -> Abrir entorno
 
-    - .\.venv\Scripts\Activate.ps1
+    .\.venv\Scripts\Activate.ps1
 
 ->	Abrir el servidor que ejecuta la aplicación y pone en marcha la API
 
-    - uvicorn 04_FASTAPI:app --host 0.0.0.0 --port 8080 --reload
+    uvicorn 04_FASTAPI:app --host 0.0.0.0 --port 8080 --reload
 
 Debe aparecer el siguiente mensaje: 
 ![alt text](image-5.png)
