@@ -198,6 +198,14 @@ Opción 1 — Clonarlo o descargarlo localmente
 
     pip3 install scikit-learn
 
+->	Instalar uvicorn
+
+    pip3 install uvicorn
+
+->	Instalar fastapi
+
+    pip3 install fastapi
+
 ->	Instalar entorno virtual desde VSC
 
     pip3 install virtualenv
