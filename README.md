@@ -186,7 +186,8 @@ Opción 1 — Clonarlo o descargarlo localmente
 
 -> Ir a Visual Studio Code (VSC) e Instalar Python 3.10+ (Si tiene problemas con la versión 3.13 se recomienda ejecutar “winget install Python.Python.3.12” desde VSC)
 
-->	Instalar dependencias con “pip3 install -r requirements.txt”
+->	Instalar dependencias
+    - pip3 install -r requirements.txt
 
 ->	Instalar seaborn con “pip3 install seaborn” y scikit-learn con “pip3 install scikit-learn”
 
