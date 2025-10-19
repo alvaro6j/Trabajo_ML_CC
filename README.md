@@ -186,21 +186,37 @@ Opción 1 — Clonarlo o descargarlo localmente
 
 -> Ir a Visual Studio Code (VSC) e Instalar Python 3.10+ (Si tiene problemas con la versión 3.13 se recomienda ejecutar “winget install Python.Python.3.12” desde VSC)
 
+    - winget install Python.Python.3.12
+
 ->	Instalar dependencias
 
     - pip3 install -r requirements.txt
 
-->	Instalar seaborn con “pip3 install seaborn” y scikit-learn con “pip3 install scikit-learn”
+->	Instalar seaborn y scikit-learn
 
-->	Instalar entorno virtual desde VSC con “pip3 install virtualenv”
+    - pip3 install seaborn
 
--> Ejecutar “Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass”
+    - pip3 install scikit-learn
 
--> Crear entorno virtual con “py -3.12 -m venv .venv”
+->	Instalar entorno virtual desde VSC
 
--> Abrir entorno con el comando “.\.venv\Scripts\Activate.ps1”
+    - pip3 install virtualenv
 
-->	Para abrir el servidor que ejecuta la aplicación y pone en marcha la API, se debe ejecutar el siguiente comando desde VSC: “uvicorn 04_FASTAPI:app --host 0.0.0.0 --port 8080 --reload”
+-> Ejecutar políticas de ejecución
+
+    - Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+-> Crear entorno virtual
+
+    - py -3.12 -m venv .venv
+
+-> Abrir entorno
+
+    - .\.venv\Scripts\Activate.ps1
+
+->	Abrir el servidor que ejecuta la aplicación y pone en marcha la API
+
+    - uvicorn 04_FASTAPI:app --host 0.0.0.0 --port 8080 --reload
 
 Debe aparecer el siguiente mensaje: 
 ![alt text](image-5.png)
@@ -215,12 +231,19 @@ Debe aparecer el siguiente mensaje:
 
 {
   "Edad": 50,
+
   "Nivel_Educacional": "SupCom",
+
   "Años_Trabajando": 10,
+
   "Ingresos": 150,
+
   "Deuda_Comercial": 0.5,
+
   "Deuda_Credito": 10,
+
   "Otras_Deudas": 50,
+
   "Ratio_Ingresos_Deudas": 0.25
 }
 
@@ -231,10 +254,15 @@ Debe aparecer el siguiente mensaje:
 El campo Nivel_Educacional solo acepta uno de los siguientes valores:
 
 Nivel:	Significado
+
 Bas:	Educación básica
+
 Med:	Educación media
+
 SupCom:	Educación superior completa
+
 SupInc:	Educación superior incompleta
+
 Posg:	Postgrado o estudios superiores
 
 Si introduce otro valor, la API devolverá un error de validación.
